@@ -1,0 +1,41 @@
+{
+    "numerical_features": [
+        "Attribute2",
+        "Attribute5",
+        "Attribute8",
+        "Attribute11",
+        "Attribute13",
+        "Attribute16",
+        "Attribute18"
+    ],
+    "categorical_features": [
+        "Attribute1",
+        "Attribute3",
+        "Attribute4",
+        "Attribute6",
+        "Attribute7",
+        "Attribute9",
+        "Attribute10",
+        "Attribute12",
+        "Attribute14",
+        "Attribute15",
+        "Attribute17",
+        "Attribute19",
+        "Attribute20"
+    ],
+    "target_column": "class",
+    "target_mapping": {
+        "0": "Bad Credit",
+        "1": "Good Credit"
+    },
+    "model": "Random Forest",
+    "best_parameters": {
+        "classifier__max_depth": 10,
+        "classifier__max_features": "sqrt",
+        "classifier__min_samples_leaf": 2,
+        "classifier__min_samples_split": 10,
+        "classifier__n_estimators": 200
+    },
+    "cv_roc_auc": 0.7989955357142857,
+    "test_roc_auc": 0.7860714285714285
+}
