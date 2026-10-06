@@ -1,44 +1,62 @@
 # CreditScore AI
 
-A machine learning-based credit scoring application that predicts whether a customer is likely to have **Good Credit** or **Bad Credit** based on historical financial and personal information.
+### Machine Learning Based Credit Risk Prediction System
 
-The project was developed as part of the **CodeAlpha Machine Learning Internship**.
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.6.1-orange?logo=scikit-learn)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://streamlit.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)](https://github.com/Ashishcoder01/CodeAlpha_Credit_Scoring_Model)
+
+CreditScore AI is a machine learning application that predicts customer creditworthiness using historical financial and personal information.
+
+The project compares multiple classification algorithms, performs cross-validation and hyperparameter tuning, and provides an interactive Streamlit interface for credit risk prediction.
+
+> Developed as part of the **CodeAlpha Machine Learning Internship — Task 1: Credit Scoring Model**.
 
 ---
 
 ## Live Demo
 
-> Coming soon — the Streamlit deployment will be added here.
+**Try CreditScore AI:**
+
+https://creditscore-ai.streamlit.app/
+
+**Source Code:**
+
+https://github.com/Ashishcoder01/CodeAlpha_Credit_Scoring_Model
 
 ---
 
-## Project Overview
+## Overview
 
-Credit risk assessment is an important problem in the financial domain. This project uses supervised machine learning to classify customers according to their creditworthiness.
+Credit risk assessment is an important machine learning problem in the financial domain.
 
-The application provides an interactive Streamlit interface where users can enter customer information and receive:
+This project uses supervised classification techniques to predict whether a customer is likely to have:
 
-- Credit risk classification
-- Good Credit probability
-- Bad Credit probability
-- Model performance information
+- Good Credit
+- Bad Credit
 
-The trained machine learning pipeline automatically handles numerical and categorical features before generating the prediction.
+The application accepts customer information through a user-friendly interface, applies the same preprocessing pipeline used during model training, and generates a credit risk prediction with probability estimates.
 
 ---
 
-## Objectives
+## Key Features
 
-The main objectives of this project are:
-
-- Build a credit classification model
-- Perform data preprocessing and exploratory analysis
-- Compare multiple machine learning algorithms
-- Evaluate models using classification and ranking metrics
-- Optimize the best-performing model
-- Save the trained model for inference
-- Build a professional interactive web application
-- Deploy the application for public access
+- Machine learning based credit risk prediction
+- Interactive Streamlit web application
+- Numerical feature standardization
+- Categorical feature encoding
+- Multiple classification models
+- Stratified train/test split
+- 5-fold cross-validation
+- Random Forest hyperparameter tuning
+- ROC-AUC based model comparison
+- Credit probability estimation
+- Human-readable input fields
+- Saved production-ready model pipeline
+- Model metadata storage
+- GitHub-based project structure
+- Cloud deployment using Streamlit Community Cloud
 
 ---
 
@@ -46,25 +64,27 @@ The main objectives of this project are:
 
 The project uses the **UCI Statlog (German Credit Data)** dataset.
 
-Dataset characteristics:
+### Dataset Information
 
-- **Instances:** 1,000
-- **Features:** 20
-- **Target:** Creditworthiness
-- **Missing values:** None
-- **Good Credit:** 700
-- **Bad Credit:** 300
+| Property | Value |
+|---|---:|
+| Instances | 1,000 |
+| Features | 20 |
+| Target Classes | 2 |
+| Good Credit | 700 |
+| Bad Credit | 300 |
+| Missing Values | None |
 
-The dataset contains financial, demographic, employment, credit history, savings, housing, and other customer-related attributes.
+The dataset contains financial and personal attributes related to customers, including credit history, credit amount, savings, employment, housing, age, existing credits, and other financial information.
 
 ### Target Mapping
 
 | Original Class | Model Label |
 |---|---|
-| 1 | Good Credit |
-| 2 | Bad Credit |
+| `1` | Good Credit |
+| `2` | Bad Credit |
 
-For the machine learning pipeline, the target was converted to:
+For model training:
 
 ```text
 1 → Good Credit
